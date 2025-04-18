@@ -4,14 +4,19 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 export class Produto {
   @PrimaryGeneratedColumn()
   id: number;
+
   @Column()
   nome: string;
+
   @Column()
   preco: number;
+
   @Column()
   quantidade: number;
-  @Column()
-  data_atualizacao: Date;
+
+  @Column({ name: 'data_atualizacao' })
+  dataAtualizacao: Date;
+
   @Column()
   imagem: string;
 }

@@ -8,7 +8,7 @@ export class Produto {
   @Column()
   nome: string;
 
-  @Column()
+  @Column({ type: 'double precision' })
   preco: number;
 
   @Column()

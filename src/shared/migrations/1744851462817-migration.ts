@@ -5,7 +5,7 @@ export class Migration1744851462817 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
-      `CREATE TABLE "produtos" ("id" SERIAL NOT NULL, "nome" character varying NOT NULL, "preco" integer NOT NULL, "quantidade" integer NOT NULL, "data_atualizacao" TIMESTAMP NOT NULL, "imagem" character varying NOT NULL, CONSTRAINT "PK_a5d976312809192261ed96174f3" PRIMARY KEY ("id"))`,
+      `CREATE TABLE "produtos" ("id" SERIAL NOT NULL, "nome" character varying NOT NULL, "preco" double precision NOT NULL, "quantidade" integer NOT NULL, "data_atualizacao" TIMESTAMP NOT NULL, "imagem" character varying NOT NULL, CONSTRAINT "PK_a5d976312809192261ed96174f3" PRIMARY KEY ("id"))`,
     );
   }
 

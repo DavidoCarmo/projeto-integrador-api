@@ -19,12 +19,18 @@ export class ProdutosService {
     });
   }
 
-  findAll() {
-    return `This action returns all produtos`;
+  async findAll() {
+    return await this.produtosRepository.find({
+      order: {
+        id: 1,
+      },
+    });
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} produto`;
+  async findOne(id: number) {
+    return await this.produtosRepository.findOneBy({
+      id,
+    });
   }
 
   async update(id: number, updateProdutoDto: UpdateProdutoDto) {
